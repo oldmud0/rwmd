@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Buildings>
+
+
+	<ThingDef Name="BuildingBase" Abstract="True">
+		<category>Building</category>
+		<bulletImpactSound>BulletImpactMetal</bulletImpactSound>
+		<selectable>true</selectable>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<surfaceNeeded>Light</surfaceNeeded>
+		<constructionEffect>ConstructMetal</constructionEffect>
+		<repairEffect>Repair</repairEffect>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<eType>BuildingComplex</eType>
+		<thingClass>Building</thingClass>
+		<blueprintTexturePath>Things/Building/Linked/Wall_Blueprint_Atlas</blueprintTexturePath>
+		<altitudeLayer>BuildingTall</altitudeLayer>
+		<passability>Impassable</passability>
+		<castEdgeShadows>true</castEdgeShadows>
+		<fillPercent>1</fillPercent>
+		<placingDraggableDimensions>0</placingDraggableDimensions>
+		<tickerType>Never</tickerType>
+		<rotatable>true</rotatable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<holdsRoof>false</holdsRoof>
+		<Overdraw>false</Overdraw>
+		<designationCategory>Building</designationCategory>
+		<staticSunShadowHeight>0.5</staticSunShadowHeight>
+		<blockLight>true</blockLight>
+		
+		<defName>SimpleBlock</defName>
+		<label>Simple block</label>
+		<description>An ugly thing.</description>
+		<texturePath>Things/Building/SimpleBlock_Atlas</texturePath>
+		<menuIconPath>Things/Building/SimpleBlock_MenuIcon</menuIconPath>
+		<maxHealth>50</maxHealth>
+		<flammability>0.1</flammability>
+		<workToBuild>100</workToBuild>
+		<mineable>false</mineable>
+		<size>(1,1)</size>
+		<costList>
+			<li>
+				<thingDef>Metal</thingDef>
+				<count>7</count>
+			</li>
+		</costList>
+		<filthLeavings>
+			<li>
+				<thingDef>SlagRubble</thingDef>
+				<count>2</count>
+			</li>
+		</filthLeavings>
+		<designationHotKey>Z</designationHotKey>
+	</ThingDef>
+
+</Buildings>
