@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TerrainDefs>
+	<TerrainDef>
+		<defName>TitaniumFloor</defName>
+		<Label>Titanium Flooring</Label>
+		<RenderPrecedence>210</RenderPrecedence>
+		<Description>A lovely floor made of 'titanium'</Description>
+		<TexturePath>Things/Floor/TitaniumFloor</TexturePath>
+		<Beauty>NiceTiny</Beauty>
+		<SurfacesSupported>
+			<li>Light</li>
+			<li>Heavy</li>
+			<li>SmoothHard</li>
+		</SurfacesSupported>
+		<WorkToBuild>50</WorkToBuild>
+		<DesignationCategory>Structure</DesignationCategory>
+		<Fertility>0</Fertility>
+		<CostList>
+			<li>
+				<thingDef>Titanium</thingDef>
+				<count>2</count>
+			</li>
+		</CostList>
+		<ConstructionEffect>ConstructDig</ConstructionEffect>
+		<AcceptTerrainSourceFilth>True</AcceptTerrainSourceFilth>
+	</TerrainDef>
+</TerrainDefs>
