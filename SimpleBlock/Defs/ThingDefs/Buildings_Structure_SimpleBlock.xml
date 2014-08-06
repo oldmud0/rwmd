@@ -4,7 +4,7 @@
 
 	<ThingDef Name="BuildingBase" Abstract="True">
 		<category>Building</category>
-		<bulletImpactSound>BulletImpactMetal</bulletImpactSound>
+		<soundBulletHit>BulletImpactMetal</soundBulletHit>
 		<selectable>true</selectable>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<surfaceNeeded>Light</surfaceNeeded>
@@ -34,7 +34,7 @@
 		<label>Simple block</label>
 		<description>An ugly thing.</description>
 		<texturePath>Things/Building/SimpleBlock_Atlas</texturePath>
-		<menuIconPath>Things/Building/SimpleBlock_MenuIcon</menuIconPath>
+		<uiIconPath>Things/Building/SimpleBlock_MenuIcon</uiIconPath>
 		<maxHealth>50</maxHealth>
 		<flammability>0.1</flammability>
 		<workToBuild>100</workToBuild>
