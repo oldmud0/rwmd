@@ -26,7 +26,7 @@
 		<neverMultiSelect>true</neverMultiSelect>
 		<holdsRoof>false</holdsRoof>
 		<Overdraw>false</Overdraw>
-		<designationCategory>Building</designationCategory>
+		<designationCategory>Structure</designationCategory>
 		<staticSunShadowHeight>0.5</staticSunShadowHeight>
 		<blockLight>true</blockLight>
 		
