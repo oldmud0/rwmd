@@ -4,55 +4,73 @@
 
 	<ThingDef Name="BuildingBase" Abstract="True">
 		<category>Building</category>
-		<soundBulletHit>BulletImpactMetal</soundBulletHit>
+		<soundImpactDefault>BulletImpactMetal</soundImpactDefault>
 		<selectable>true</selectable>
 		<drawerType>MapMeshAndRealTime</drawerType>
-		<surfaceNeeded>Light</surfaceNeeded>
-		<constructionEffect>ConstructMetal</constructionEffect>
-		<repairEffect>Repair</repairEffect>
-	</ThingDef>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
 
+		<repairEffect>Repair</repairEffect>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<filthLeaving>BuildingRubble</filthLeaving>
+	</ThingDef>
+	<!-- constructionEffect>ConstructMetal</constructionEffect> -->
+  
 	<ThingDef ParentName="BuildingBase">
-		<eType>BuildingComplex</eType>
+		<defName>SimpleBlock</defName>
+		<label>Simple block</label>
 		<thingClass>Building</thingClass>
-		<blueprintTexturePath>Things/Building/Linked/Wall_Blueprint_Atlas</blueprintTexturePath>
+		<category>Building</category>
+		<description>An ugly thing.</description>
+		<graphicPath>Things/Building/SimpleBlock_Atlas</graphicPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<uiIconPath>Things/Building/SimpleBlock_MenuIcon</uiIconPath>
+		<blueprintgraphicPath>Things/Building/Linked/Wall_Blueprint_Atlas</blueprintgraphicPath>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<WorkToMake>100</WorkToMake>
+			<Flammability>1.0</Flammability>
+		</statBases>
+		<costStuffCount>5</costStuffCount>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
 		<altitudeLayer>BuildingTall</altitudeLayer>
 		<passability>Impassable</passability>
 		<castEdgeShadows>true</castEdgeShadows>
 		<fillPercent>1</fillPercent>
-		<placingDraggableDimensions>0</placingDraggableDimensions>
+		<placingDraggableDimensions>1</placingDraggableDimensions>
 		<tickerType>Never</tickerType>
-		<rotatable>true</rotatable>
+		<rotatable>false</rotatable>
 		<neverMultiSelect>true</neverMultiSelect>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
 		<holdsRoof>false</holdsRoof>
-		<Overdraw>false</Overdraw>
 		<designationCategory>Structure</designationCategory>
 		<staticSunShadowHeight>0.5</staticSunShadowHeight>
 		<blockLight>true</blockLight>
-		
-		<defName>SimpleBlock</defName>
-		<label>Simple block</label>
-		<description>An ugly thing.</description>
-		<texturePath>Things/Building/SimpleBlock_Atlas</texturePath>
-		<uiIconPath>Things/Building/SimpleBlock_MenuIcon</uiIconPath>
-		<maxHealth>50</maxHealth>
-		<flammability>0.1</flammability>
-		<workToBuild>100</workToBuild>
-		<mineable>false</mineable>
-		<size>(1,1)</size>
-		<costList>
-			<li>
-				<thingDef>Metal</thingDef>
-				<count>7</count>
-			</li>
-		</costList>
-		<filthLeavings>
-			<li>
-				<thingDef>SlagRubble</thingDef>
-				<count>2</count>
-			</li>
-		</filthLeavings>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+			<li>Stony</li>
+		</stuffCategories>
 		<designationHotKey>Z</designationHotKey>
 	</ThingDef>
 
+	<!-- <Overdraw>false</Overdraw>  -->
+	<!-- <eType>BuildingComplex</eType> -->
+	<!-- <maxHealth>50</maxHealth> -->
+	<!-- <flammability>0.1</flammability> -->
+	<!-- <workToBuild>100</workToBuild> -->
+	<!-- <mineable>false</mineable> -->
+	<!--  <size>(1,1)</size> -->
+	<!--<costList>
+		<li>
+		<thingDef>Metal</thingDef>
+		<count>7</count>
+		</li>
+		</costList> -->
+	<!--<filthLeavings>
+		<li>
+		<thingDef>SlagRubble</thingDef>
+		<count>2</count>
+		</li>
+	</filthLeavings> -->
+  
 </Buildings>
