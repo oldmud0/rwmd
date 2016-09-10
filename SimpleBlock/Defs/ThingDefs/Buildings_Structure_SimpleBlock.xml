@@ -21,10 +21,7 @@
 		<thingClass>Building</thingClass>
 		<category>Building</category>
 		<description>An ugly thing.</description>
-		<graphicPath>Things/Building/SimpleBlock_Atlas</graphicPath>
-		<graphicClass>Graphic_Single</graphicClass>
 		<uiIconPath>Things/Building/SimpleBlock_MenuIcon</uiIconPath>
-		<blueprintgraphicPath>Things/Building/Linked/Wall_Blueprint_Atlas</blueprintgraphicPath>
 		<statBases>
 			<MaxHitPoints>50</MaxHitPoints>
 			<WorkToMake>100</WorkToMake>
@@ -32,7 +29,7 @@
 		</statBases>
 		<costStuffCount>5</costStuffCount>
 		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
-		<altitudeLayer>BuildingTall</altitudeLayer>
+		<altitudeLayer>Building</altitudeLayer>
 		<passability>Impassable</passability>
 		<castEdgeShadows>true</castEdgeShadows>
 		<fillPercent>1</fillPercent>
@@ -51,6 +48,14 @@
 			<li>Stony</li>
 		</stuffCategories>
 		<designationHotKey>Z</designationHotKey>
+		<!-- Alpha 15 XML Structure  -->
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Things/Building/SimpleBlock_Atlas</texPath>
+		</graphicData>
+		<blueprintGraphicData>
+			<texPath>Things/Building/Linked/Wall_Blueprint_Atlas</texPath>
+		</blueprintGraphicData>
 	</ThingDef>
 
 	<!-- <Overdraw>false</Overdraw>  -->
